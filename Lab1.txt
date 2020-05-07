@@ -1,0 +1,12 @@
+A = wavread('0167-f3.wav');
+subplot(4,2,1:2); plot(A);
+B=A(18230:20980);  % UnVoiced
+subplot(4,2,3); plot(B);
+C = A(35960:40790); % Voiced
+subplot(4,2,5); plot(C);
+D = A(55910:61050); % Voiced
+subplot(4,2,7); plot(D);
+
+subplot(4,2,4); plotCorr(B);
+subplot(4,2,6); plotCorr(C); 
+subplot(4,2,8); plotCorr(D);
